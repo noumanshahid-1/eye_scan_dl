@@ -1,35 +1,47 @@
 # Eye Scan DL
 
-A Flutter application for multi-class retinal disease detection from fundus eye images. The app lets users capture or select an image, runs a TensorFlow Lite model locally, and displays the predicted disease label with a confidence score.
+Portfolio-ready Flutter app for retinal disease screening. The app accepts a fundus image, runs an on-device TensorFlow Lite classifier, and presents the predicted disease label with a confidence score.
 
-## Screenshots
+## Preview
 
-| Welcome | Upload | Result |
+| Welcome | Image Upload | Detection Result |
 | --- | --- | --- |
-| ![Welcome screen](screenshots/UI.png) | ![Upload screen](screenshots/media.png) | ![Result screen](screenshots/result.png) |
+| ![Eye Scan welcome screen](screenshots/UI.png) | ![Eye Scan upload screen](screenshots/media.png) | ![Eye Scan result screen](screenshots/result.png) |
 
-## Features
+## Project Highlights
 
-- Gallery image input, Camera input is not applicable (requires sensor)
-- Local TensorFlow Lite inference
-- Retinal fundus image validation threshold
-- Prediction result with confidence percentage
-- Simple Flutter UI for mobile and desktop targets
+- Built a complete Flutter flow for retinal image selection, preview, inference, and results.
+- Integrated local TensorFlow Lite inference so predictions run on device without a server.
+- Added confidence-based validation to reject images that are unlikely to be valid retinal fundus scans.
+- Structured labels and model assets for repeatable multi-class disease prediction.
+- Kept the repository clean by excluding generated build artifacts and the large model file.
 
-## Project Structure
+## Tech Stack
 
-- `lib/` - Flutter UI and inference flow
-- `assets/class_labels.json` - model output labels
-- `assets/model.tflite` - local model file, intentionally not tracked because it is large
-- `screenshots/` - README screenshots
+- Flutter and Dart
+- TensorFlow Lite via `tflite_flutter`
+- `image_picker` for gallery-based image input
+- `image` for preprocessing
+- Android, iOS, web, and desktop Flutter project targets
 
-## Setup
+## Repository Structure
 
-1. Install Flutter and verify it with `flutter doctor`.
-2. Run `flutter pub get`.
-3. Add the trained model file at `assets/model.tflite`.
-4. Run the app with `flutter run`.
+- `lib/` - application screens, navigation, upload flow, and inference logic
+- `assets/class_labels.json` - output label mapping for model classes
+- `assets/model.tflite` - local model file, excluded from Git because of size
+- `screenshots/` - portfolio screenshots used in this README
 
-## Notes
+## Run Locally
 
-The TensorFlow Lite model is excluded from Git because it is about 83 MB. Keep a local copy at `assets/model.tflite` before running inference.
+1. Install Flutter and confirm the environment with `flutter doctor`.
+2. Install dependencies with `flutter pub get`.
+3. Place the trained TensorFlow Lite model at `assets/model.tflite`.
+4. Start the app with `flutter run`.
+
+## Model Note
+
+The trained `.tflite` model is about 83 MB, so it is intentionally excluded from the repository. Restore it locally at `assets/model.tflite` before running inference.
+
+## Input Note
+
+The portfolio flow is centered on gallery image selection. Camera capture depends on device sensor availability and may not be applicable in all target environments.
