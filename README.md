@@ -1,6 +1,18 @@
 # Eye Scan DL
 
-Portfolio-ready Flutter app for retinal disease screening. The app accepts a fundus image, runs an on-device TensorFlow Lite classifier, and presents the predicted disease label with a confidence score.
+![Flutter](https://img.shields.io/badge/Flutter-Mobile%20App-02569B?style=for-the-badge&logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart)
+![TensorFlow Lite](https://img.shields.io/badge/TensorFlow%20Lite-On--Device%20AI-FF6F00?style=for-the-badge&logo=tensorflow)
+![Medical AI](https://img.shields.io/badge/Medical%20AI-Retinal%20Screening-0ea5e9?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Research%20Prototype-facc15?style=for-the-badge)
+
+An AI-powered Flutter application for **retinal disease screening** from fundus eye images.
+
+The application accepts a retinal image, performs on-device TensorFlow Lite classification, maps the model output to disease labels, applies confidence-based validation for invalid retinal inputs, and presents the predicted label with a confidence score inside a clean portfolio-ready mobile interface.
+
+> **Research Use Only:** This project is intended for educational and research screening demonstrations. It is not intended for clinical diagnosis, treatment planning, or replacement of expert ophthalmological review.
+
+---
 
 ## Preview
 
