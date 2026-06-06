@@ -10,7 +10,7 @@ A Flutter application for multi-class retinal disease detection from fundus eye 
 
 ## Features
 
-- Camera and gallery image input
+- Gallery image input, Camera input is not applicable (requires sensor)
 - Local TensorFlow Lite inference
 - Retinal fundus image validation threshold
 - Prediction result with confidence percentage
